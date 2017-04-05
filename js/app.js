@@ -88,6 +88,7 @@ function compareGuess(guess)
 
     if(guess == COMPUTER_CHOICE){
         $("#feedback").text("YOU MATCHED IT!!");
+        $("#guessButton").css('display', 'none');
     }
     else if(diff <= 10 && diff != 0){
         $("#feedback").text("You're burning hot!");
@@ -136,6 +137,8 @@ $("#count").text(NUM_GUESSES);
 $("#feedback").text("Make your guess!");
 
 $("#userGuess").val("Enter your guess!");
+    
+$("#guessButton").css('display', 'block');
 
 // clear previous game guess list if any
 $("ul.guessBox li").remove();
